@@ -1,0 +1,23 @@
+model,id,category,prompt_tokens,output_tokens,prefill_s,decode_s,total_s,response
+llama3.2:3b,fact-1,factual,37,4,0.08476,0.065021,0.1555465,Canberra.
+llama3.2:3b,fact-2,factual,43,4,0.078347,0.065150999,0.146813209,Jane Austen
+llama3.2:3b,reason-1,reasoning,50,4,0.080533,0.064425,0.149418083,7.33
+llama3.2:3b,reason-2,reasoning,57,3,0.133853,0.044415,0.182857208,Yes.
+llama3.2:3b,code-1,coding,47,36,0.080159,0.714825,0.799423959,"```python
+def is_palindrome(s):
+    s = ''.join(c for c in s if c.isalnum()).lower()
+    return s == s[::-1]
+```"
+llama3.2:3b,code-2,coding,46,59,0.077213,1.177271,1.2578815,"```python
+def fib(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+```"
+llama3.2:3b,sum-1,summarization,93,34,0.193269,0.670793,0.868667458,"Quantization reduces the precision of a neural network's weights, resulting in a smaller memory footprint and faster inference, but at the cost of a small loss in accuracy."
+llama3.2:3b,sum-2,summarization,86,48,0.141607,0.968251,1.113605291,"The city council approved a 40 km bike lane network, funded by a state grant, with construction set to begin in March and last for 18 months, despite opposition from those who argued it would remove parking from busy shopping streets."
+llama3.2:3b,json-1,json,58,21,0.132437999,0.409939,0.546266417,"{""name"": ""Priya"", ""age"": 29, ""city"": ""Chennai""}"
+llama3.2:3b,json-2,json,59,23,0.132497999,0.450545,0.586130417,"{""product"": ""ThinkPad X1"", ""price"": 1499, ""currency"": ""USD""}"
