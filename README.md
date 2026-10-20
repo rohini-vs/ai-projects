@@ -30,7 +30,7 @@ Every week's folder has two documents:
 | 01 | [Local Model Bench + Tokenizer](./week-01-model-bench/) | Prefill vs. decode, memory bandwidth, quantization, BPE tokenization, why Tamil costs more tokens than English | ✅ [Learnings](./week-01-model-bench/LEARNINGS.md) |
 | 02 | [Structured Extractor](./week-02-structured-extractor/) | Schemas, validation, retry loops with error feedback, reasoning-model overhead | ✅ [Learnings](./week-02-structured-extractor/LEARNINGS.md) |
 | 03 | [Tool-Calling Agent](./week-03-tool-agent/) | The agent loop, tool-call contracts, fake tool calls, stop sequences, safe execution | ✅ [Learnings](./week-03-tool-agent/LEARNINGS.md) |
-| 04 | Docs Q&A (Naive RAG) | Chunking, embeddings, retrieval, citations | 🔜 Next |
+| 04 | [Docs Q&A (Naive RAG)](./week-04-docs-qa/) | Chunking strategies, embeddings, pgvector retrieval, grounded prompts with page citations, measuring retrieval vs. answers | ✅ [Learnings](./week-04-docs-qa/LEARNINGS.md) |
 | 05–21 | See the [roadmap](#roadmap) below | | ☐ |
 
 ---
@@ -42,11 +42,13 @@ flowchart LR
     W1["<b>Week 1</b><br/>How models run<br/>and read text"] --> W2["<b>Week 2</b><br/>Get output code<br/>can trust"]
     W2 --> W3["<b>Week 3</b><br/>Let the model<br/>call functions"]
     W3 --> W4["<b>Week 4</b><br/>Give the model<br/>your documents"]
+    W4 --> W5["<b>Week 5</b><br/>Measure whether<br/>retrieval works"]
 ```
 
 - **Week 1** found that models sometimes break JSON format (fences, wrong types).
 - **Week 2** fixed that with schemas and a validate-and-retry loop.
 - **Week 3** reused that structured output so the model can **ask for a tool**, the core of every agent.
+- **Week 4** gave the model your own documents: retrieve the relevant passages, then answer from them with citations.
 
 ---
 
@@ -55,6 +57,7 @@ flowchart LR
 **You'll need:**
 - [Ollama](https://ollama.com) installed and running
 - [uv](https://docs.astral.sh/uv/) for Python (projects use Python 3.14)
+- [Docker](https://www.docker.com/) for Week 4 onward (runs Postgres + pgvector)
 - ~8 GB free RAM for the 7B models
 
 ```bash

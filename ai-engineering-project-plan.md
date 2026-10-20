@@ -28,7 +28,7 @@ One project per week, one repo that grows over time. Default stack is **Python +
 
 ## Phase 2: Retrieval (Weeks 4–6)
 
-### Week 4: Docs Q&A (Naive RAG)
+### Week 4: Docs Q&A (Naive RAG) ✅ Done
 - **What:** Chat with your own documents: chunk, embed, retrieve, answer with citations.
 - **Stack:** nomic-embed-text, pgvector (Docker), PyMuPDF, FastAPI, Streamlit
 - **Study:** LLM Zoomcamp: RAG modules
@@ -196,9 +196,9 @@ One project per week, one repo that grows over time. Default stack is **Python +
 | Week | Project | Status |
 |---|---|---|
 | 1 | Local Model Bench + Tokenizer Side-Quest | ✅ Done |
-| 2 | Structured Extractor | ☐ |
-| 3 | Tool-Calling Agent from Scratch | ☐ |
-| 4 | Docs Q&A (Naive RAG) | ☐ |
+| 2 | Structured Extractor | ✅ Done |
+| 3 | Tool-Calling Agent from Scratch | ✅ Done |
+| 4 | Docs Q&A (Naive RAG) | ✅ Done |
 | 5 | RAG Eval Harness | ☐ |
 | 6 | Advanced + Self-Correcting RAG + Frameworks | ☐ |
 | 7 | Observability, Guardrails + Red Team | ☐ |
